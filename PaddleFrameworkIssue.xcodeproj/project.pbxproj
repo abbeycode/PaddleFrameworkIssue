@@ -12,6 +12,7 @@
 		96414A0F1BBF234200C307DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96414A0E1BBF234200C307DC /* Images.xcassets */; };
 		96414A121BBF234200C307DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96414A101BBF234200C307DC /* MainMenu.xib */; };
 		96414A1E1BBF234200C307DC /* PaddleFrameworkIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96414A1D1BBF234200C307DC /* PaddleFrameworkIssueTests.m */; };
+		DD83EAD82870E9EB25C16A64 /* libPods-PaddleFrameworkIssue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10EC0034A2304C4526915519 /* Pods-PaddleFrameworkIssue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaddleFrameworkIssue.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue.release.xcconfig"; sourceTree = "<group>"; };
+		126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaddleFrameworkIssue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5EA528C9B210DDCF4BE048 /* Pods-PaddleFrameworkIssue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaddleFrameworkIssue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue.debug.xcconfig"; sourceTree = "<group>"; };
 		96414A041BBF234200C307DC /* PaddleFrameworkIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaddleFrameworkIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96414A081BBF234200C307DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96414A091BBF234200C307DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD83EAD82870E9EB25C16A64 /* libPods-PaddleFrameworkIssue.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,12 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04BAE360DD8F0A38C0844A2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		964149FB1BBF234200C307DC = {
 			isa = PBXGroup;
 			children = (
 				96414A061BBF234200C307DC /* PaddleFrameworkIssue */,
 				96414A1A1BBF234200C307DC /* PaddleFrameworkIssueTests */,
 				96414A051BBF234200C307DC /* Products */,
+				E80D32676C06193E73ADC237 /* Pods */,
+				04BAE360DD8F0A38C0844A2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +126,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E80D32676C06193E73ADC237 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C5EA528C9B210DDCF4BE048 /* Pods-PaddleFrameworkIssue.debug.xcconfig */,
+				10EC0034A2304C4526915519 /* Pods-PaddleFrameworkIssue.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96414A211BBF234200C307DC /* Build configuration list for PBXNativeTarget "PaddleFrameworkIssue" */;
 			buildPhases = (
+				ADAFA74F64E8464D9570E961 /* Check Pods Manifest.lock */,
 				96414A001BBF234200C307DC /* Sources */,
 				96414A011BBF234200C307DC /* Frameworks */,
 				96414A021BBF234200C307DC /* Resources */,
+				8ED7FBC726858261F6753E57 /* Embed Pods Frameworks */,
+				F68D2F098FEED84F434F33BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +187,7 @@
 				TargetAttributes = {
 					96414A031BBF234200C307DC = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = EVCNFGN735;
 					};
 					96414A161BBF234200C307DC = {
 						CreatedOnToolsVersion = 6.4;
@@ -204,6 +232,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8ED7FBC726858261F6753E57 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADAFA74F64E8464D9570E961 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F68D2F098FEED84F434F33BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96414A001BBF234200C307DC /* Sources */ = {
@@ -326,22 +402,28 @@
 		};
 		96414A221BBF234200C307DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C5EA528C9B210DDCF4BE048 /* Pods-PaddleFrameworkIssue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PaddleFrameworkIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		96414A231BBF234200C307DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10EC0034A2304C4526915519 /* Pods-PaddleFrameworkIssue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PaddleFrameworkIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -401,6 +483,7 @@
 				96414A231BBF234200C307DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96414A241BBF234200C307DC /* Build configuration list for PBXNativeTarget "PaddleFrameworkIssueTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +492,7 @@
 				96414A261BBF234200C307DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
