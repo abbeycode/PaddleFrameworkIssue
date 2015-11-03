@@ -12,7 +12,8 @@
 		96414A0F1BBF234200C307DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96414A0E1BBF234200C307DC /* Images.xcassets */; };
 		96414A121BBF234200C307DC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96414A101BBF234200C307DC /* MainMenu.xib */; };
 		96414A1E1BBF234200C307DC /* PaddleFrameworkIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96414A1D1BBF234200C307DC /* PaddleFrameworkIssueTests.m */; };
-		DD83EAD82870E9EB25C16A64 /* libPods-PaddleFrameworkIssue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */; };
+		968708B21BE909C90007C8C6 /* Paddle-MAS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968708B11BE909C90007C8C6 /* Paddle-MAS.framework */; };
+		968708B31BE909D30007C8C6 /* Paddle-MAS.framework in Copy Paddle */ = {isa = PBXBuildFile; fileRef = 968708B11BE909C90007C8C6 /* Paddle-MAS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,9 +26,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		968708B01BE909A50007C8C6 /* Copy Paddle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				968708B31BE909D30007C8C6 /* Paddle-MAS.framework in Copy Paddle */,
+			);
+			name = "Copy Paddle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		10EC0034A2304C4526915519 /* Pods-PaddleFrameworkIssue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaddleFrameworkIssue.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue.release.xcconfig"; sourceTree = "<group>"; };
-		126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaddleFrameworkIssue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5EA528C9B210DDCF4BE048 /* Pods-PaddleFrameworkIssue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaddleFrameworkIssue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue.debug.xcconfig"; sourceTree = "<group>"; };
 		96414A041BBF234200C307DC /* PaddleFrameworkIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaddleFrameworkIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96414A081BBF234200C307DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +53,7 @@
 		96414A171BBF234200C307DC /* PaddleFrameworkIssueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaddleFrameworkIssueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96414A1C1BBF234200C307DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96414A1D1BBF234200C307DC /* PaddleFrameworkIssueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaddleFrameworkIssueTests.m; sourceTree = "<group>"; };
+		968708B11BE909C90007C8C6 /* Paddle-MAS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Paddle-MAS.framework"; path = "Lib/Paddle/Paddle-MAS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD83EAD82870E9EB25C16A64 /* libPods-PaddleFrameworkIssue.a in Frameworks */,
+				968708B21BE909C90007C8C6 /* Paddle-MAS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +78,7 @@
 		04BAE360DD8F0A38C0844A2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				126FFECEE7909DF59B9DFA0F /* libPods-PaddleFrameworkIssue.a */,
+				968708B11BE909C90007C8C6 /* Paddle-MAS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,12 +157,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96414A211BBF234200C307DC /* Build configuration list for PBXNativeTarget "PaddleFrameworkIssue" */;
 			buildPhases = (
-				ADAFA74F64E8464D9570E961 /* Check Pods Manifest.lock */,
 				96414A001BBF234200C307DC /* Sources */,
 				96414A011BBF234200C307DC /* Frameworks */,
 				96414A021BBF234200C307DC /* Resources */,
-				8ED7FBC726858261F6753E57 /* Embed Pods Frameworks */,
-				F68D2F098FEED84F434F33BB /* Copy Pods Resources */,
+				968708B01BE909A50007C8C6 /* Copy Paddle */,
 			);
 			buildRules = (
 			);
@@ -232,54 +245,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8ED7FBC726858261F6753E57 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADAFA74F64E8464D9570E961 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F68D2F098FEED84F434F33BB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaddleFrameworkIssue/Pods-PaddleFrameworkIssue-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96414A001BBF234200C307DC /* Sources */ = {
@@ -402,11 +367,14 @@
 		};
 		96414A221BBF234200C307DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C5EA528C9B210DDCF4BE048 /* Pods-PaddleFrameworkIssue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib/Paddle",
+				);
 				INFOPLIST_FILE = PaddleFrameworkIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -416,11 +384,14 @@
 		};
 		96414A231BBF234200C307DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10EC0034A2304C4526915519 /* Pods-PaddleFrameworkIssue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib/Paddle",
+				);
 				INFOPLIST_FILE = PaddleFrameworkIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
